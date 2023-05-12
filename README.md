@@ -5,10 +5,10 @@ This is a WIP! See below for my progress!
 ## Acceptance Criteria Progress Checklist
 
 - [ ] GIVEN a command-line application that accepts user input
-- [ ] WHEN I am prompted for text
-- [ ] THEN I can enter up to three characters
-- [ ] WHEN I am prompted for the text color
-- [ ] THEN I can enter a color keyword (OR a hexadecimal number)
+- [x] WHEN I am prompted for text
+- [x] THEN I can enter up to three characters
+- [x] WHEN I am prompted for the text color
+- [x] THEN I can enter a color keyword (OR a hexadecimal number)
 - [ ] WHEN I am prompted for a shape
 - [ ] THEN I am presented with a list of shapes to choose from: circle, triangle, and square
 - [ ] WHEN I am prompted for the shape's color
