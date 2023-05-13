@@ -22,13 +22,19 @@ const shapeQuestions = [
   {
     type: "maxlength-input",
     name: "textColor",
-    message: `\n 1) Pick a text color or 3 digit hex code (for example, for 'red', type in 'red' or F00):`,
+    message: `\n 1) First, pick a text color or 3 digit hex code (for example, for 'red', type in 'red' or F00):`,
     maxLength: 3,
   },
   {
-    type: "maxlength-input",
+    type: "list",
     name: "shape",
-    message: `\n 2) Pick a shape (type in 'tri', 'rec', or 'cir'):`,
+    message: `\n 2) Next, choose a shape from the list below:`,
+    choices: ["circle", "triangle", "square"],
+  },
+  {
+    type: "maxlength-input",
+    name: "shapeColor",
+    message: `\n 1) Lastly, pick a shape color or 3 digit hex code (for example, for 'red', type in 'red' or F00):`,
     maxLength: 3,
   },
 ];
@@ -78,17 +84,17 @@ init();
 function next(answers) {
   userData = answers;
   switch (userData.shape) {
-    case "tri":
-      const newTriangle = new Shape[1]();
+    case "circle":
+      const newCircle = new Shape[1]();
+      newCircle.customerResponse();
+      break;
+    case "triangle":
+      const newTriangle = new Shape[2]();
       newTriangle.customerResponse();
       break;
-    case "rec":
-      const newRectangle = new Shape[2]();
-      newRectangle.customerResponse();
-      break;
     default:
-      const newCircle = new Shape[3]();
-      newCircle.customerResponse();
+      const newSquare = new Shape[3]();
+      newSquare.customerResponse();
   }
 
   console.log(
