@@ -1,0 +1,21 @@
+
+    <svg
+    width="541"
+    height="271"
+    >
+
+        <rect
+            width="541"
+            height="271"
+            x="0"
+            y="0"
+            fill="#3d5ea1"
+        />
+
+        <polygon
+            fill="white"
+            points="150, 18 244, 182 56, 200"
+        />
+
+    </svg>
+    
