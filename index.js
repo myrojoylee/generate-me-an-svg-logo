@@ -28,7 +28,7 @@ const shapeQuestions = [
   {
     type: "maxlength-input",
     name: "shape",
-    message: `\n 2) Pick a shape (type in 'cir', 'tri', or 'sqr'):`,
+    message: `\n 2) Pick a shape (type in 'tri', 'rec', or 'cir'):`,
     maxLength: 3,
   },
 ];
@@ -57,20 +57,44 @@ let userData;
 // ======================================================== //
 //                          CODE BELOW
 // ======================================================== //
-// function init() {
-//   console.log(`\nHello! Welcome to the Shape Generator!\n
-//     Everything you type is restricted to 3 characters.
-//     Just follow the directions and we will get a shape in the end!\n`);
 
-//   inquirer.registerPrompt("maxlength-input", MaxLength);
-//   inquirer.prompt(shapeQuestions).then((answers) => next(answers));
-// }
-// init();
+/**
+ * begins inquirer prompt
+ */
+function init() {
+  console.log(`\nHello! Welcome to the Shape Generator!\n
+    Everything you type is restricted to 3 characters.
+    Just follow the directions and we will get a shape in the end!\n`);
 
-// function next(answers) {
-//   userData = answers;
-//   console.log(`The user wants a ${userData.textColor} ${userData.shape}.`);
-// }
+  inquirer.registerPrompt("maxlength-input", MaxLength);
+  inquirer.prompt(shapeQuestions).then((answers) => next(answers));
+}
+init();
+
+/**
+ * matches parameters with answers
+ * @param {*} answers responses from inquirer
+ */
+function next(answers) {
+  userData = answers;
+  switch (userData.shape) {
+    case "tri":
+      const newTriangle = new Shape[1]();
+      newTriangle.customerResponse();
+      break;
+    case "rec":
+      const newRectangle = new Shape[2]();
+      newRectangle.customerResponse();
+      break;
+    default:
+      const newCircle = new Shape[3]();
+      newCircle.customerResponse();
+  }
+
+  console.log(
+    `\nCongrats! A new .svg file should have generated on the left-side panel!`
+  );
+}
 
 // fs.writeFile("sample-file.svg", sampleShape, (err) => {
 //   if (err) {
@@ -79,5 +103,5 @@ let userData;
 //   console.log("The file was saved!");
 // });
 
-const renderThis = new Triangle();
-console.log(renderThis.render());
+// const newShape = new Shape[1]();
+// console.log(newShape.render(4, 6));
