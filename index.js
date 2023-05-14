@@ -34,12 +34,12 @@ const shapeQuestions = [
   {
     type: "maxlength-input",
     name: "shapeColor",
-    message: `\n 1) Lastly, pick a shape color or 3 digit hex code (for example, for 'red', type in 'red' or F00):`,
+    message: `\n 3) Lastly, pick a shape color or 3 digit hex code (for example, for 'red', type in 'red' or F00):`,
     maxLength: 3,
   },
 ];
 
-let userData;
+let userData, shapeColor, textColor;
 // ======================================================== //
 //                          CODE BELOW
 // ======================================================== //
@@ -62,13 +62,9 @@ init();
  * @param {*} answers responses from inquirer
  */
 function next(answers) {
-  decideColor();
-  let shapeColor, textColor;
-  userData = answers;
-  textColor = userData.textColor;
-  shapeColor = userData.shapeColor;
+  decideColor(answers);
 
-  switch (userData.shape) {
+  switch (answers.shape) {
     case "circle":
       const newCircle = new Shape[1]();
       fs.writeFile(
@@ -105,5 +101,10 @@ function next(answers) {
 }
 
 function decideColor(answers) {
-  let shapeColor, textColor;
+  if (answers.textColor === "bla" || answers.textColor === "000") {
+    textColor = "black";
+    shapeColor = "cyan";
+  } else {
+  }
+  return textColor && shapeColor;
 }
