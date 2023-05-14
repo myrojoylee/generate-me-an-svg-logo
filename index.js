@@ -38,27 +38,7 @@ const shapeQuestions = [
     maxLength: 3,
   },
 ];
-const sampleShape = `
-    <svg
-    width="541"
-    height="271"
-    >
 
-        <rect
-            width="541"
-            height="271"
-            x="0"
-            y="0"
-            fill="#3d5ea1"
-        />
-
-        <polygon
-            fill="white"
-            points="100,50 400,100 320,200 80,230"
-        />
-
-    </svg>
-    `;
 let userData;
 // ======================================================== //
 //                          CODE BELOW
@@ -82,32 +62,48 @@ init();
  * @param {*} answers responses from inquirer
  */
 function next(answers) {
+  decideColor();
+  let shapeColor, textColor;
   userData = answers;
+  textColor = userData.textColor;
+  shapeColor = userData.shapeColor;
+
   switch (userData.shape) {
     case "circle":
       const newCircle = new Shape[1]();
-      newCircle.customerResponse();
+      fs.writeFile(
+        "sample-file.svg",
+        newCircle.render(300, 200, shapeColor, textColor),
+        (err) => {
+          err ? console.err(err) : console.log("success!");
+        }
+      );
       break;
     case "triangle":
       const newTriangle = new Shape[2]();
-      newTriangle.customerResponse();
+      // newTriangle.customerResponse();
+      fs.writeFile(
+        "sample-file.svg",
+        newTriangle.render(300, 200, shapeColor, textColor),
+        (err) => {
+          err ? console.err(err) : console.log("success!");
+        }
+      );
       break;
     default:
       const newSquare = new Shape[3]();
-      newSquare.customerResponse();
+      fs.writeFile(
+        "sample-file.svg",
+        newSquare.render(300, 200, shapeColor, textColor),
+        (err) => {
+          err ? console.err(err) : console.log("success!");
+        }
+      );
   }
 
-  console.log(
-    `\nCongrats! A new .svg file should have generated on the left-side panel!`
-  );
+  console.log(`\nGenerated logo.svg!`);
 }
 
-// fs.writeFile("sample-file.svg", sampleShape, (err) => {
-//   if (err) {
-//     return console.err(err);
-//   }
-//   console.log("The file was saved!");
-// });
-
-// const newShape = new Shape[1]();
-// console.log(newShape.render(4, 6));
+function decideColor(answers) {
+  let shapeColor, textColor;
+}
