@@ -67,39 +67,48 @@ init();
  * @param {*} answers responses from inquirer
  */
 function next(answers) {
-  let svgText = answers.svgText;
-  let shapeColor = answers.shapeColor;
-  let textColor = answers.textColor;
+  const width = 300;
+  const height = 200;
+  const bgColor = "white";
   switch (answers.shape) {
     case "circle":
-      const newCircle = new Shape[1]();
-      fs.writeFile(
-        "logo.svg",
-        newCircle.render(300, 200, svgText, shapeColor, textColor),
-        (err) => {
-          err ? console.err(err) : console.log(`\nGenerated logo.svg!\n`);
-        }
+      const newCircle = new Shape[1](
+        width,
+        height,
+        answers.svgText,
+        bgColor,
+        answers.textColor,
+        answers.shapeColor
       );
+      fs.writeFile("logo.svg", newCircle.renderLogo(), (err) => {
+        err ? console.err(err) : console.log(`\nGenerated logo.svg!\n`);
+      });
       break;
     case "triangle":
-      const newTriangle = new Shape[2]();
-
-      fs.writeFile(
-        "logo.svg",
-        newTriangle.render(300, 200, svgText, shapeColor, textColor),
-        (err) => {
-          err ? console.err(err) : console.log(`\nGenerated logo.svg!\n`);
-        }
+      const newTriangle = new Shape[2](
+        width,
+        height,
+        answers.svgText,
+        bgColor,
+        answers.textColor,
+        answers.shapeColor
       );
+      fs.writeFile("logo.svg", newTriangle.renderLogo(), (err) => {
+        err ? console.err(err) : console.log(`\nGenerated logo.svg!\n`);
+      });
       break;
     default:
-      const newSquare = new Shape[3]();
-      fs.writeFile(
-        "logo.svg",
-        newSquare.render(300, 200, svgText, shapeColor, textColor),
-        (err) => {
-          err ? console.err(err) : console.log(`\nGenerated logo.svg!\n`);
-        }
+      const newSquare = new Shape[3](
+        width,
+        height,
+        answers.svgText,
+        bgColor,
+        answers.textColor,
+        answers.shapeColor
       );
+      fs.writeFile("logo.svg", newSquare.renderLogo(), (err) => {
+        err ? console.err(err) : console.log(`\nGenerated logo.svg!\n`);
+      });
+      break;
   }
 }
