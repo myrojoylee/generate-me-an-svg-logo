@@ -21,25 +21,30 @@ const shapeQuestions = [
   },
   {
     type: "maxlength-input",
+    name: "svgText",
+    message: `\n 1) First, pick your logo text (limited to 3 characters):`,
+    maxLength: 3,
+  },
+  {
+    type: "input",
     name: "textColor",
-    message: `\n 1) First, pick a text color or 3 digit hex code (for example, for 'red', type in 'red' or F00):`,
+    message: `\n 2) Next, pick a text color or 6 digit hex code (type in 'red' or '#FF0000'):`,
     maxLength: 3,
   },
   {
     type: "list",
     name: "shape",
-    message: `\n 2) Next, choose a shape from the list below:`,
+    message: `\n 3) Then, choose a shape from the list below:`,
     choices: ["circle", "triangle", "square"],
   },
   {
-    type: "maxlength-input",
+    type: "input",
     name: "shapeColor",
-    message: `\n 3) Lastly, pick a shape color or 3 digit hex code (for example, for 'red', type in 'red' or F00):`,
+    message: `\n 4) Lastly, pick a shape color or 6 digit hex code (type in 'red' or '#FF0000'):`,
     maxLength: 3,
   },
 ];
 
-let userData, shapeColor, textColor;
 // ======================================================== //
 //                          CODE BELOW
 // ======================================================== //
@@ -49,8 +54,8 @@ let userData, shapeColor, textColor;
  */
 function init() {
   console.log(`\nHello! Welcome to the Shape Generator!\n
-    Everything you type is restricted to 3 characters.
-    Just follow the directions and we will get a shape in the end!\n`);
+
+    Just follow the directions to get your logo!\n`);
 
   inquirer.registerPrompt("maxlength-input", MaxLength);
   inquirer.prompt(shapeQuestions).then((answers) => next(answers));
@@ -62,49 +67,39 @@ init();
  * @param {*} answers responses from inquirer
  */
 function next(answers) {
-  decideColor(answers);
-
+  let svgText = answers.svgText;
+  let shapeColor = answers.shapeColor;
+  let textColor = answers.textColor;
   switch (answers.shape) {
     case "circle":
       const newCircle = new Shape[1]();
       fs.writeFile(
-        "sample-file.svg",
-        newCircle.render(300, 200, shapeColor, textColor),
+        "logo.svg",
+        newCircle.render(300, 200, svgText, shapeColor, textColor),
         (err) => {
-          err ? console.err(err) : console.log("success!");
+          err ? console.err(err) : console.log(`\nGenerated logo.svg!\n`);
         }
       );
       break;
     case "triangle":
       const newTriangle = new Shape[2]();
-      // newTriangle.customerResponse();
+
       fs.writeFile(
-        "sample-file.svg",
-        newTriangle.render(300, 200, shapeColor, textColor),
+        "logo.svg",
+        newTriangle.render(300, 200, svgText, shapeColor, textColor),
         (err) => {
-          err ? console.err(err) : console.log("success!");
+          err ? console.err(err) : console.log(`\nGenerated logo.svg!\n`);
         }
       );
       break;
     default:
       const newSquare = new Shape[3]();
       fs.writeFile(
-        "sample-file.svg",
-        newSquare.render(300, 200, shapeColor, textColor),
+        "logo.svg",
+        newSquare.render(300, 200, svgText, shapeColor, textColor),
         (err) => {
-          err ? console.err(err) : console.log("success!");
+          err ? console.err(err) : console.log(`\nGenerated logo.svg!\n`);
         }
       );
   }
-
-  console.log(`\nGenerated logo.svg!`);
-}
-
-function decideColor(answers) {
-  if (answers.textColor === "bla" || answers.textColor === "000") {
-    textColor = "black";
-    shapeColor = "cyan";
-  } else {
-  }
-  return textColor && shapeColor;
 }

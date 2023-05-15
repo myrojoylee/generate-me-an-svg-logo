@@ -10,7 +10,7 @@ This is a WIP! See below for my progress!
 
 ## Acceptance Criteria Progress Checklist
 
-- [ ] GIVEN a command-line application that accepts user input
+- [x] GIVEN a command-line application that accepts user input
 - [x] WHEN I am prompted for text
 - [x] THEN I can enter up to three characters
 - [x] WHEN I am prompted for the text color
@@ -19,16 +19,20 @@ This is a WIP! See below for my progress!
 - [x] THEN I am presented with a list of shapes to choose from: circle, triangle, and square
 - [x] WHEN I am prompted for the shape's color
 - [x] THEN I can enter a color keyword (OR a hexadecimal number)
-- [ ] WHEN I have entered input for all the prompts
-- [ ] THEN an SVG file is created named `logo.svg`
+- [x] WHEN I have entered input for all the prompts
+- [x] THEN an SVG file is created named `logo.svg`
       AND the output text "Generated logo.svg" is printed in the command line
-- [ ] WHEN I open the `logo.svg` file in a browser
-- [ ] THEN I am shown a 300x200 pixel image that matches the criteria I entered
+- [x] WHEN I open the `logo.svg` file in a browser
+- [x] THEN I am shown a 300x200 pixel image that matches the criteria I entered
 
 ### Additionally:
 
 - [ ] Implement unit testing using Jest
 - [ ] WHEN I run the test in the terminal, all tests pass.
+
+## Sources:
+
+Code for basic shapes was found in MDN web docs [here](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes).
 
 ## License
 
