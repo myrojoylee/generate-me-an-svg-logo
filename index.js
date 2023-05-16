@@ -12,14 +12,6 @@ const MaxLength = require("inquirer-maxlength-input-prompt");
 // ======================================================== //
 const shapeQuestions = [
   {
-    type: "confirm",
-    name: "confirmToStart",
-    message: `Are you ready to begin? `,
-    maxLength: 3,
-    default: false,
-    transformer: (answer) => (answer ? "👍" : "👎"),
-  },
-  {
     type: "maxlength-input",
     name: "svgText",
     message: `\n 1) First, pick your logo text (limited to 3 characters):`,
