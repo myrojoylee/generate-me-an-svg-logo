@@ -27,8 +27,10 @@ This is a WIP! See below for my progress!
 
 ### Additionally:
 
-- [ ] Implement unit testing using Jest
-- [ ] WHEN I run the test in the terminal, all tests pass.
+- [x] Implement unit testing using Jest
+- [x] WHEN I run the test in the terminal, all tests pass.
+
+- [ ] WHEN I go through my code, it has been tested and refactored to the best of my ability.
 
 ## Sources:
 
