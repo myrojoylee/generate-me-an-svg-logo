@@ -30,6 +30,8 @@ This is a WIP! See below for my progress!
 - [x] Implement unit testing using Jest
 - [x] WHEN I run the test in the terminal, all tests pass.
 
+- [ ] WHEN I look through the repository,
+- [ ] THEN I see examples of generated SVGs.
 - [ ] WHEN I go through my code, it has been tested and refactored to the best of my ability.
 
 ## Sources:
