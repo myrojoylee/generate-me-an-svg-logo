@@ -19,9 +19,12 @@
 
   - Type `node index.js` in the Terminal and go through the prompts to generate your SVG which will be located in the `/examples` folder.
   - When prompted for colors, samples were taken from a [Browser-Supported Color List](https://www.w3schools.com/cssref/css_colors.php). Please either enter a color name from here all in lowercase or a 6-digit hex value beginning with the "#" sign. For example, `aliceblue` or its counterpart, `#F0F8FF` are acceptable for the same color. Similar instructions are included as part of the prompt.
-  - A sample svg is shown below. The color for text used in this example was `maroon`, or `#800000`, with the shape color being `orchid`, or `#DA70D6`:
 
-<img src="https://github.com/myrojoylee/generate-me-an-svg-logo/blob/main/examples/square.svg" width = 500px />
+- Sample SVG shown below:
+
+  - Details: Text color is `maroon`, or `#800000`, with the shape color being `orchid`, or `#DA70D6`:
+
+  <img src="https://github.com/myrojoylee/generate-me-an-svg-logo/blob/main/examples/square.svg" width = 500px />
 
 ## Testing
 
