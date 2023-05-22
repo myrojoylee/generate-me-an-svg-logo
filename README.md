@@ -29,6 +29,10 @@
 
 3. A walkthrough video can be found [here](https://drive.google.com/file/d/1IhKNvGDRkX7CTVhA-nf23jOUoQI3xyQV/view?usp=sharing). It can also be found below:
 
+
+https://github.com/myrojoylee/generate-me-an-svg-logo/assets/120980593/79f82eda-961f-421e-834a-ffb1501b6841
+
+
 ## Sources:
 
 Code for basic shapes was found in MDN web docs [here](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes).
