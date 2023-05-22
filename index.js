@@ -21,7 +21,6 @@ const shapeQuestions = [
     type: "input",
     name: "textColor",
     message: `\n 2) Next, pick a text color or 6 digit hex code (type in 'red' or '#FF0000'):`,
-    maxLength: 3,
   },
   {
     type: "list",
@@ -33,7 +32,6 @@ const shapeQuestions = [
     type: "input",
     name: "shapeColor",
     message: `\n 4) Lastly, pick a shape color or 6 digit hex code (type in 'red' or '#FF0000'):`,
-    maxLength: 3,
   },
 ];
 
@@ -72,8 +70,10 @@ function next(answers) {
         answers.textColor,
         answers.shapeColor
       );
-      fs.writeFile("logo.svg", newCircle.renderLogo(), (err) => {
-        err ? console.err(err) : console.log(`\nGenerated logo.svg!\n`);
+      fs.writeFile("./examples/circle.svg", newCircle.renderLogo(), (err) => {
+        err
+          ? console.err(err)
+          : console.log(`\nGenerated ${answers.shape}.svg!\n`);
       });
       break;
     case "triangle":
@@ -85,9 +85,15 @@ function next(answers) {
         answers.textColor,
         answers.shapeColor
       );
-      fs.writeFile("logo.svg", newTriangle.renderLogo(), (err) => {
-        err ? console.err(err) : console.log(`\nGenerated logo.svg!\n`);
-      });
+      fs.writeFile(
+        "./examples/triangle.svg",
+        newTriangle.renderLogo(),
+        (err) => {
+          err
+            ? console.err(err)
+            : console.log(`\nGenerated ${answers.shape}.svg!\n`);
+        }
+      );
       break;
     default:
       const newSquare = new Shape[3](
@@ -98,8 +104,10 @@ function next(answers) {
         answers.textColor,
         answers.shapeColor
       );
-      fs.writeFile("logo.svg", newSquare.renderLogo(), (err) => {
-        err ? console.err(err) : console.log(`\nGenerated logo.svg!\n`);
+      fs.writeFile("./examples/square.svg", newSquare.renderLogo(), (err) => {
+        err
+          ? console.err(err)
+          : console.log(`\nGenerated ${answers.shape}.svg!\n`);
       });
       break;
   }
