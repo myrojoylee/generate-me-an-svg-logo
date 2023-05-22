@@ -23,15 +23,17 @@
 
 <img src="https://github.com/myrojoylee/generate-me-an-svg-logo/blob/main/examples/square.svg" width = 500px />
 
-2. Unit Tests using Jest
+## Testing
 
-- Type `npm run test` in the terminal to run all 4 unit tests that are provided. You can find the code for these in the `/lib` folder.
+- Unit Tests using Jest
 
-3. A walkthrough video can be found [here](https://drive.google.com/file/d/1IhKNvGDRkX7CTVhA-nf23jOUoQI3xyQV/view?usp=sharing). It can also be found below:
+  - Type `npm run test` in the terminal to run all 4 unit tests that are provided. You can find the code for these in the `/lib` folder.
 
+## Demo
+
+- A walkthrough video can be found [here](https://drive.google.com/file/d/1IhKNvGDRkX7CTVhA-nf23jOUoQI3xyQV/view?usp=sharing). It can also be found below:
 
 https://github.com/myrojoylee/generate-me-an-svg-logo/assets/120980593/79f82eda-961f-421e-834a-ffb1501b6841
-
 
 ## Sources:
 
