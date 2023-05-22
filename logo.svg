@@ -1,7 +1,0 @@
-
-      <svg xmlns="http://www.w3.org/2000/svg" width="300" height="200">
-        <rect width="300" height="200" fill='white' />
-        <polygon points="150, 18 244, 155 56, 155" fill="burlywood"/>
-        <text x="127" y="110" font-size="1.5em" fill='brown'>YAY</text>
-      </svg>
-    
