@@ -4,35 +4,30 @@
 
 ## Description
 
-- The purpose of this assignment was to implement the concept of polymorphism by using parent and child class constructors, to begin understanding TDD with Jest unit testing, and to practice more with the Inquirer package.
+- The purpose of this assignment was to implement the concept of polymorphism by using parent and child class constructors, to begin understanding Test-driven develpment (TDD) with unit testing using Jest, and to practice more with the Inquirer package.
 
-This is a WIP! See below for my progress!
+## Installation
 
-## Acceptance Criteria Progress Checklist
+- This is a [Node.js](https://nodejs.org/en) application. It is recommended to use at least v16 (up to v18) for this app to run correctly.
+- [Inquirer v8.2.4](https://www.npmjs.com/package/inquirer) is needed and can be installed via npm. Once in your project folder, type the following in your terminal: `npm i inquirer@8.2.4`.
+- [Jest](https://www.npmjs.com/package/jest) is needed to run unit tests and can be installed via npm. Once in your project folder, type the following in your terminal: `npm i jest`.
+- [Inquirer-maxlength-input-prompt](https://www.npmjs.com/package/inquirer-maxlength-input-prompt) was used to restrict one of the user inputs to 3 characters. Once in your terminal, type the following in your terminal: `npm i inquirer-maxlength-input-prompt`.
 
-- [x] GIVEN a command-line application that accepts user input
-- [x] WHEN I am prompted for text
-- [x] THEN I can enter up to three characters
-- [x] WHEN I am prompted for the text color
-- [x] THEN I can enter a color keyword (OR a hexadecimal number)
-- [x] WHEN I am prompted for a shape
-- [x] THEN I am presented with a list of shapes to choose from: circle, triangle, and square
-- [x] WHEN I am prompted for the shape's color
-- [x] THEN I can enter a color keyword (OR a hexadecimal number)
-- [x] WHEN I have entered input for all the prompts
-- [x] THEN an SVG file is created named `logo.svg`
-      AND the output text "Generated logo.svg" is printed in the command line
-- [x] WHEN I open the `logo.svg` file in a browser
-- [x] THEN I am shown a 300x200 pixel image that matches the criteria I entered
+## Usage
 
-### Additionally:
+1. Generating an SVG
 
-- [x] Implement unit testing using Jest
-- [x] WHEN I run the test in the terminal, all tests pass.
+- Type `node index.js` in the Terminal and go through the prompts to generate your SVG which will be located in the `/examples` folder.
+- When prompted for colors, samples were taken from a [Browser-Supported Color List](https://www.w3schools.com/cssref/css_colors.php). Please either enter a color name from here all in lowercase or a 6-digit hex value beginning with the "#" sign. For example, `aliceblue` or its counterpart, `#F0F8FF` are acceptable for the same color. Similar instructions are included as part of the prompt.
+- A sample svg is shown below. The color for text used in this example was `maroon`, or `#800000`, with the shape color being `orchid`, or `#DA70D6`:
 
-- [ ] WHEN I look through the repository,
-- [ ] THEN I see examples of generated SVGs.
-- [ ] WHEN I go through my code, it has been tested and refactored to the best of my ability.
+<img src="https://github.com/myrojoylee/generate-me-an-svg-logo/blob/main/examples/square.svg" width = 500px />
+
+2. Unit Tests using Jest
+
+- Type `npm run test` in the terminal to run all 4 unit tests that are provided. You can find the code for these in the `/lib` folder.
+
+3. A walkthrough video can be found [here](https://drive.google.com/file/d/1IhKNvGDRkX7CTVhA-nf23jOUoQI3xyQV/view?usp=sharing). It can also be found below:
 
 ## Sources:
 
