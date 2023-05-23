@@ -25,7 +25,7 @@
   - Details: Text color is `maroon`, or `#800000`, with the shape color being `orchid`, or `#DA70D6`:
 
 
-  <img src="https://github.com/myrojoylee/generate-me-an-svg-logo/blob/main/examples/square.svg" width = 500px />
+    <img src="https://github.com/myrojoylee/generate-me-an-svg-logo/blob/main/examples/square.svg" width = 500px />
 
 ## Testing
 
@@ -35,9 +35,9 @@
 
 ## Demo
 
-- A walkthrough video can be found [here](https://drive.google.com/file/d/1IhKNvGDRkX7CTVhA-nf23jOUoQI3xyQV/view?usp=sharing). It can also be found below:
+- A walkthrough video can be found [here](https://drive.google.com/file/d/16gWtFU23_cPqxD6MRY4pNmJamlYXXf42/view?usp=sharing). It can also be found below:
 
-https://github.com/myrojoylee/generate-me-an-svg-logo/assets/120980593/79f82eda-961f-421e-834a-ffb1501b6841
+https://github.com/myrojoylee/generate-me-an-svg-logo/assets/120980593/55ddf2a3-9350-4813-ab2c-e49ca8652615
 
 ## Sources:
 
